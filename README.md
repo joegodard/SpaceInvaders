@@ -7,4 +7,4 @@ The player must shoot and destroy all of the aliens before they reach the bottom
 The player must also avoid the shots sent by the aliens.     
 
 # Display:
-![Display]()
+![Display](https://github.com/joegodard/SpaceInvaders/blob/main/Images/Display.png?raw=true)
