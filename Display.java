@@ -1,16 +1,11 @@
-/* This gives a graphics window for Assignment 4 in COMP 1020 (Winter 2019).
- * The student must supply the SpaceInvaders class
- */
-
 import javax.swing.*; //Needed for windows
 import java.awt.*;    //Needed for graphics
 import java.awt.event.*; //Needed for the mouse events
 import java.util.ArrayList;
 
-public class Display extends JFrame { //JFrame means "window", in effect
+public class Display extends JFrame { 
 	
-	// some hints about other colours that are available for use
-	// This is the same code that is in StdDraw.java
+	// Colours
 	public static final Color BLACK      = Color.BLACK;
     public static final Color BLUE       = Color.BLUE;
     public static final Color CYAN       = Color.CYAN;
@@ -28,7 +23,7 @@ public class Display extends JFrame { //JFrame means "window", in effect
 	private static final Color green = new Color(92,87,25);
 	private static final Color yellow = new Color(237, 172, 60);
     
-    // shape for an alien you can use
+    // shape for the alien
 	public static final Color [][] ALIEN_SHAPE = 
 		{
 				{null, null, Display.BLACK, null, null, null, null, null, Display.BLACK, null, null},
@@ -41,7 +36,7 @@ public class Display extends JFrame { //JFrame means "window", in effect
 				{null,null,null,Display.BLACK,Display.BLACK,null,Display.BLACK,Display.BLACK,null,null,null}
 		};
 	
-	// shape for the ship you can use
+	// shape for the ship
 	public static final Color [][] SHIP_SHAPE = 
 		{
 				{null,null,null,null,null,Display.BLACK,null,null,null,null,null},
@@ -65,7 +60,7 @@ public class Display extends JFrame { //JFrame means "window", in effect
 	public static final long REFRESH_INTERVAL = 33; 
 
 	private static final long serialVersionUID = 1L; //eliminates warnings
-	private JPanel wholeWindow; //A JPanel is the content within a window
+	private JPanel wholeWindow; //Content within the window
 	private SpaceInvaders myApp; //A reference to the SpaceInvaders object handling this window.
 	private Graphics myGraphics; //Saved reference to the graphics environment
 	private static Display game;
@@ -187,10 +182,10 @@ public class Display extends JFrame { //JFrame means "window", in effect
 			 * Whenever the window needs to be drawn, or redrawn,
 			 * this method will automatically be called.
 			 */
-			myGraphics = g; //Just remember the Graphics environment
+			myGraphics = g; 
 			
 			if (game != null) {
-				game.draw(); //And then let the app do what it wants
+				game.draw(); 
 			}
 		}//paintComponent method
 	}//private inner class graphicsPanel
